@@ -1,2 +1,4 @@
 # spring-cloud-task-learning
-this is a spring-cloud-task-learning repository,there are some samples demo what can teach you how to use spring cloud task 
+spring cloud is a framework to build DevOpts friendly microservice application。it provides some stable component which can help you build application more easier.
+
+I divide micro service application into two categories: Application and Data Stream.'Application' mainly service for business as 'Data Stream' service for data flow.
