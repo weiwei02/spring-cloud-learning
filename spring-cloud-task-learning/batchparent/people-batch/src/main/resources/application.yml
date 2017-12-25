@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: people-batch
+  cloud.task.initialize.enable: true
+logging.level.org.springframework.cloud.task: DEBUG
+datasource:
+  cloudTask:
+      url: jdbc:mysql://ubuntu:3306/cloud_task?useUnicode=true&characterEncoding=utf8
+      username: dataflow
+      password: dataflow
+      driver-class-name: com.mysql.jdbc.Driver
+  cloudTaskDemo:
+        url: jdbc:mysql://ubuntu:3306/cloud_task?useUnicode=true&characterEncoding=utf8
+        username: dataflow
+        password: dataflow
+        driver-class-name: com.mysql.jdbc.Driver
+  # 默认数据库连接池配置
+  pool.config:
+    default:
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20

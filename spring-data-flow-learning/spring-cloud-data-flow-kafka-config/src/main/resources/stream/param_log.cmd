@@ -1,0 +1,1 @@
+time --spring.profiles.active=kafka --spring.config.location=i:/opt/SpringCloud/config/application-kafka.yml | log --spring.profiles.active=kafka --spring.config.location=i:/opt/SpringCloud/config/application-kafka.yml

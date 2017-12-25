@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:  ubuntu:9092
+          autoAddPartitions:  true
+          zkNodes:  ubuntu:32770
+          client.id:  param_log
+      bindings:
+        output:
+          destination:  param_log.time
+          producer:
+            configuration:
+              key.serializer: class org.apache.kafka.common.serialization.StringSerializer
+              value.serializer: class org.apache.kafka.common.serialization.StringSerializer
+              client.id:  time
+              retries:  1
+              reconnect.backoff.ms: 1000
+        input:
+          destination:  param_log.time
+          consumer:
+            configuration:
+              key.deserializer: org.apache.kafka.common.serialization.StringDesrializer.class
+              value.deserializer: org.apache.kafka.common.serialization.StringDesrializer.class
+#logging.level.root: DEBUG

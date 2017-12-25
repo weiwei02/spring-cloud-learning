@@ -1,0 +1,34 @@
+server:
+  port: 11100
+
+management:
+  contextPath: /management
+  security:
+    enabled: false
+info:
+  app:
+    name: "spring-cloud-starter-dataflow-server-local"
+    description: "spring-cloud-starter-dataflow-server-local"
+    version: "1.2.3.RELEASE"
+security:
+  basic:
+    enabled: false
+
+maven:
+  localRepository: /mnt/hgfs/office/workspace/reposity
+  remoteRepositories:
+    springRepo:
+      url: https://repo.spring.io/libs-snapshot
+
+spring:
+  application:
+    name: spring-cloud-dataflow-server-local
+  cloud:
+    config:
+      uri: http://localhost:8888
+      enabled: false
+  task:
+    repo:
+      initialize: true
+  profiles:
+    active: win

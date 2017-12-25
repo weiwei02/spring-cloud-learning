@@ -1,0 +1,25 @@
+
+maven:
+  localRepository: I:/workspace/repository
+  remoteRepositories:
+    springRepo:
+      url: https://repo.spring.io/libs-snapshot
+
+spring:
+  application:
+    name: spring-cloud-dataflow-server-local
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+
+  datasource:
+      url: jdbc:mysql://ubuntu:3306/dataflow
+      username: dataflow
+      password: dataflow
+      driverClassName:  com.mysql.jdbc.Driver
+  task:
+    repo:
+      initialize: true
+  cloud:
+    config:
+      enabled: false

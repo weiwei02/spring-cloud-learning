@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.weiwei02</groupId>
+	<artifactId>spring-cloud-task-demo-with-datasource</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>task-demo-with-datasource</name>
+	<description>带有数据源配置的Spring Cloud Task 应用</description>
+	<parent>
+		<groupId>com.github.weiwei02</groupId>
+		<artifactId>spring-cloud-task-learning</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<developers>
+		<developer>
+			<name>Wang Weiwei</name>
+			<email>weiwei02@vip.qq.com</email>
+			<roles>
+				<role>Project Owner</role>
+				<role>Developer</role>
+			</roles>
+			<organization>github</organization>
+			<organizationUrl>https://github.com/weiwei02</organizationUrl>
+			<url>http://www.jianshu.com/u/aa501451a235</url>
+		</developer>
+	</developers>
+
+	<dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-task</artifactId>
+            <version>${spring-cloud-task.version}</version>
+        </dependency>
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+
+</project>

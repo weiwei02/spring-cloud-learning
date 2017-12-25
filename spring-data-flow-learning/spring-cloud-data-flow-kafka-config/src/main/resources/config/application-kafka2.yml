@@ -1,0 +1,24 @@
+spring:
+  kafka:
+    bootstrap-servers: ubuntu:9092
+    client-id: param_log
+    consumer:
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      groupId: param_log
+    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 1
+    template:
+      default-topic: param_log
+#    properties:
+#      request.timeout.ms: 3000
+  cloud:
+    stream:
+      kafka:
+        binder:
+          autoAddPartitions:  true
+          zkNodes:  ubuntu:2181
+
+#logging.level.root: DEBUG
