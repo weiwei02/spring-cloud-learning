@@ -1,0 +1,15 @@
+server:
+  port: 8082
+spring:
+  cloud:
+    stream:
+      bindings:
+        sample-source:
+          destination: testtock
+        input:
+          destination: testtock
+        output:
+          destination: xformed
+          content-type: application/json
+        sample-sink:
+          destination: xformed
