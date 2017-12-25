@@ -1,5 +1,6 @@
 package com.github.weiwei02.springcloud.stream.simple.listener;
 
+import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -9,6 +10,8 @@ import org.springframework.messaging.handler.annotation.SendTo;
  * @version 1.0
  * @sine 2017/12/26
  */
+
+@EnableBinding(Processor.class)
 public class SampleTransformer {
     private static final String TRANSFORMATION_VALUE = "HI";
 

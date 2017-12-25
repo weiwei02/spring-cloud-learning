@@ -3,24 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>spring-cloud-stream-simple-listener</artifactId>
+	<packaging>jar</packaging>
 
-	<packaging>pom</packaging>
-
-	<name>spring-cloud-stream-simple-listener</name>
+	<name>stream-simple-listener</name>
 	<description>简单的消息监听者示例</description>
 
 	<parent>
 		<groupId>com.github.weiwei02</groupId>
 		<artifactId>spring-cloud-stream-learning</artifactId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath>../pox.xml</relativePath> <!-- lookup parent from repository -->
+		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -33,6 +26,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -40,6 +37,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.github.weiwei02.springcloud.stream.simple.listener.SpringCloudStreamSimpleListenerApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
